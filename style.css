@@ -13,14 +13,15 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #1f1f1f;
     border-radius: 15px;
-    max-width: 500px;
+    max-width: 90%;
+    width: 400px;
     overflow: hidden;
 }
 
 #display {
     width: 100%;
     padding: 20px;
-    font-size: 5rem;
+    font-size: 2.5rem;
     text-align: left;
     border: none;
     background-color: #464545;
@@ -31,37 +32,70 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 25px;
+    padding: 20px;
 }
 
 button {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
     border: none;
     background-color: hsl(0, 0%, 30%);
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
+}
 
-    &:hover {
-        background-color: hsl(0, 0%, 40%);
-    }
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
 
-    &:active {
-        background-color: hsl(0, 0%, 50%);
-    }
+button:active {
+    background-color: hsl(0, 0%, 50%);
 }
 
 .operator-btn {
     background-color: #4682b4;
-    text-shadow: 5px 4px #064477;
-    &:hover{
-        background-color :#42a1ee;
+    text-shadow: 2px 2px #064477;
+}
+
+.operator-btn:hover {
+    background-color: #42a1ee;
+}
+
+.operator-btn:active {
+    background-color: #3f77a5;
+    text-shadow: 2px 2px #0c3e68;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    #display {
+        font-size: 2rem;
+        padding: 15px;
     }
-    &:active {
-        background-color: #3f77a5;
-        text-shadow: 2px 2px #0c3e68;
+
+    button {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #calculator {
+        width: 95%;
+    }
+
+    #display {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    #keys {
+        gap: 8px;
+    }
+
+    button {
+        font-size: 1.5rem;
     }
 }
