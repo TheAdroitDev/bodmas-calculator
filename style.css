@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(214, 214, 214);
+}
+
+#calculator {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: #464545;
+    color: wheat;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsl(0, 0%, 40%);
+    }
+
+    &:active {
+        background-color: hsl(0, 0%, 50%);
+    }
+}
+
+.operator-btn {
+    background-color: #4682b4;
+    text-shadow: 5px 4px #064477;
+    &:hover{
+        background-color :#42a1ee;
+    }
+    &:active {
+        background-color: #3f77a5;
+        text-shadow: 2px 2px #0c3e68;
+    }
+}
